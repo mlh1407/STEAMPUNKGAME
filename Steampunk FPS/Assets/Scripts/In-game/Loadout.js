@@ -1,5 +1,9 @@
 ﻿#pragma strict
 
+var loadout : int[];
+
+var weaponTypes : String[];
+
 var foldedOut : int = 0;
 var subFoldedOut : int[];
 var side : int;
@@ -173,6 +177,8 @@ function OnGUI () {
 		    				subFoldedOut[2] = -1;
 		    				subFoldedOut[3] = -1;
 	    					subFoldedOut[4] = -1;
+	    					
+	    					loadout[foldedOut] = i;
 						}
 					}
 				}
@@ -207,6 +213,8 @@ function OnGUI () {
 		    				subFoldedOut[2] = -1;
 		    				subFoldedOut[3] = -1;
 	    					subFoldedOut[4] = -1;
+	    					
+	    					loadout[foldedOut] = i;
 						}
 					}
 				}
@@ -241,6 +249,8 @@ function OnGUI () {
 		    				subFoldedOut[2] = i;
 		    				subFoldedOut[3] = -1;
 	    					subFoldedOut[4] = -1;
+	    					
+	    					loadout[foldedOut] = i;
 						}
 					}
 				}
@@ -274,6 +284,8 @@ function OnGUI () {
 		    				subFoldedOut[2] = -1;
 		    				subFoldedOut[3] = i;
 	    					subFoldedOut[4] = -1;
+	    					
+	    					loadout[foldedOut] = i;
 						}
 					}
 				}
@@ -307,6 +319,8 @@ function OnGUI () {
 		    				subFoldedOut[2] = -1;
 		    				subFoldedOut[3] = -1;
 	    					subFoldedOut[4] = i;
+	    					
+	    					loadout[foldedOut] = i;
 						}
 					}
 				}
@@ -361,13 +375,27 @@ function OnGUI () {
 		//Sidetal
 		GUI.Box(new Rect(ScrInPro(5,"width")+ScrInPro(90,"height")/2+ScrInPro(45,"height")/2-ScrInPro(45,"height")/4, ScrInPro(7,"height"), ScrInPro(45,"height")/4, ScrInPro(6,"height")), (1+side).ToString()+"/"+antalSider[foldedOut].ToString());
 		
+		//Tab som er åben	
+		GUI.Box(new Rect(ScrInPro(5,"width")+ScrInPro(90,"height")/2+ScrInPro(45,"height")/2+ScrInPro(45,"height")/2-ScrInPro(45,"height")/4, ScrInPro(7,"height"), widthOfRow-4*(ScrInPro(45,"height")/2-ScrInPro(45,"height")/4), ScrInPro(6,"height")), weaponTypes[foldedOut]);
+		
 		//Close
 		if (GUI.Button(new Rect(widthOfRow+ScrInPro(5,"width")+(ScrInPro(90,"height")/40) + (ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20)) + ScrInPro(weaponMargin,"width") - ((ScrInPro(45,"height")/2-ScrInPro(45,"height")/4)), ScrInPro(7,"height"), ScrInPro(45,"height")/2-ScrInPro(45,"height")/4, ScrInPro(6,"height")), "X")) {
 			showMenu = false;
-		}
+		}	
+	
+	}
+	//Finish
+	if (GUI.Button(new Rect(Screen.width-ScrInPro(5,"width")-ScrInPro(20,"width"),Screen.height-ScrInPro(5,"height")-ScrInPro(7,"width"),ScrInPro(20,"width"),ScrInPro(7,"width")), "Finish")) {
+		finish();
+	
+	}
 			
-	}		
 }
+
+function finish () {
+	Debug.Log("Finished : " + loadout.ToString());
+}
+
 
 //En function som tager en procentdel af skærmopløsningen
 function ScrInPro (procent : int, orientation : String) {
