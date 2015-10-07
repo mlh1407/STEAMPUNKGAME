@@ -1,42 +1,54 @@
 ﻿#pragma strict
 
+
+@Tooltip ("Det endelige resultat.")
 var loadout : int[];
 
+@Tooltip ("Typer af våben man kan vælge.")
 var weaponTypes : String[];
 
-var foldedOut : int = 0;
-var subFoldedOut : int[];
+private var foldedOut : int = 0;
+private var subFoldedOut : int[] = [0,0,0,0,0];
+@Tooltip ("Den side som bliver vist.")
 var side : int;
 
+@Header ("Primary")
 var primaryNames : String[];
 var primaryImages : Texture[];
 var primaryDescription : String[];
 
+@Header ("Secondary")
 var secondaryNames : String[];
 var secondaryImages : Texture[];
 var secondaryDescription : String[];
 
+@Header ("Melee")
 var meleeNames : String[];
 var meleeImages : Texture[];
 var meleeDescription : String[];
 
+@Header ("Grenades")
 var grenadeNames : String[];
 var grenadeImages : Texture[];
 var grenadeDescription : String[];
 
+@Header ("Armor")
 var armorNames : String[];
 var armorImages : Texture[];
 var armorDescription : String[];
 
-var antalSider : float[] = [0f,0f,0f];
-
+@Header ("GUI settings")
 var weaponBoxWidth : int;
 var weaponMargin : int;
 var subMenuMarginFromTitle : int;
+@Tooltip ("Bestemmer størrelsen på UI'et")
 var UIScale : float;
+@Tooltip ("Antallet af knapper før en ny side bliver tilføjet.")
 var antalPerRaekke : float;
+@Tooltip ("Bestemmer om man den starter forfra når den går videre fra sidste side.")
 var scrollTilbageTilSidste : boolean;
 
+private var antalSider : float[] = [0f,0f,0f,0f,0f];
 private var widthOfRow : int;
 private var i : int;
 private var y : int;
@@ -72,7 +84,7 @@ function OnGUI () {
 
 	
 	//Primary
-	if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), ScrInPro(13,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(30,"height")), "Primary")) {
+	if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), ScrInPro(13,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(30,"height")), "Primary - "+loadout[0])) {
     	foldedOut = 0;
     	side = 0;
     	
@@ -88,7 +100,7 @@ function OnGUI () {
     }
     
     //Secondary
-	if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), ScrInPro(13,"height")+ScrInPro(30,"height")+ScrInPro(1,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(25,"height")), "Secondary")) {
+	if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), ScrInPro(13,"height")+ScrInPro(30,"height")+ScrInPro(1,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(25,"height")), "Secondary - "+loadout[1])) {
     	foldedOut = 1;
     	side = 0;
     	
@@ -104,7 +116,7 @@ function OnGUI () {
     }
     
     //Melee
-	if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), ScrInPro(13,"height")+ScrInPro(55,"height")+ScrInPro(2,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(25,"height")), "Melee")) {
+	if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), ScrInPro(13,"height")+ScrInPro(55,"height")+ScrInPro(2,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(25,"height")), "Melee - "+loadout[2])) {
     	foldedOut = 2;
     	side = 0;
     	
@@ -120,7 +132,7 @@ function OnGUI () {
     }
     
     //Grenades
-    if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), Screen.height-ScrInPro(7,"height")-ScrInPro(31,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(15,"height")), "Grenades")) {
+    if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), Screen.height-ScrInPro(7,"height")-ScrInPro(31,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(15,"height")), "Grenades - "+loadout[3])) {
     	foldedOut = 3;
     	side = 0;
     	
@@ -136,7 +148,7 @@ function OnGUI () {
     }
     
     //Armor
-    if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), Screen.height-ScrInPro(7,"height")-ScrInPro(15,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(15,"height")), "Armor")) {
+    if (GUI.Button(new Rect(ScrInPro(5,"width")+(ScrInPro(90,"height")/40), Screen.height-ScrInPro(7,"height")-ScrInPro(15,"height"), ScrInPro(90,"height")/2-(ScrInPro(90,"height")/20), ScrInPro(15,"height")), "Armor - "+loadout[4])) {
     	foldedOut = 4;
     	side = 0;
     	
