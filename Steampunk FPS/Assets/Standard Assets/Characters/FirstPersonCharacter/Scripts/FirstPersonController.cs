@@ -48,7 +48,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		private bool crouch; 
 
 		private float tParam = 0;
-		private float valToBeLerped = 0;
 
         // Use this for initialization
         private void Start()
