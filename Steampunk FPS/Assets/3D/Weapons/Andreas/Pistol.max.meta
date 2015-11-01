@@ -11,12 +11,16 @@ ModelImporter:
     100006: Cylinder002
     100008: Line001
     100010: Line002
+    100012: miAreaLightomni001
+    100014: Sky001
     400000: Box001
     400002: Cylinder001
     400004: //RootNode
     400006: Cylinder002
     400008: Line001
     400010: Line002
+    400012: miAreaLightomni001
+    400014: Sky001
     2300000: Box001
     2300002: Cylinder001
     2300004: Cylinder002
@@ -56,7 +60,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .0116999997
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
