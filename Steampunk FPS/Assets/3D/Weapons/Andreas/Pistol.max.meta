@@ -13,6 +13,10 @@ ModelImporter:
     100010: Line002
     100012: miAreaLightomni001
     100014: Sky001
+    100016: Bone001
+    100018: Bone002
+    100020: Bone003
+    100022: Bone004
     400000: Box001
     400002: Cylinder001
     400004: //RootNode
@@ -21,6 +25,10 @@ ModelImporter:
     400010: Line002
     400012: miAreaLightomni001
     400014: Sky001
+    400016: Bone001
+    400018: Bone002
+    400020: Bone003
+    400022: Bone004
     2300000: Box001
     2300002: Cylinder001
     2300004: Cylinder002
@@ -36,7 +44,9 @@ ModelImporter:
     4300004: Line001
     4300006: Line002
     4300008: Cylinder002
+    7400000: Take 001
     9500000: //RootNode
+    13700000: Cylinder001
   materials:
     importMaterials: 1
     materialName: 0
