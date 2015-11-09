@@ -11,12 +11,13 @@ public class Radar : MonoBehaviour
 	
 	public Texture blip  ;
 	public Texture radarBG ;
+	public int mapSize = 128;
 	
-	public Transform centerObject ;
-	public float mapScale = 0.3f;
-	public Vector2 mapCenter = new Vector2(50,50);
-	public string tagFilter =  "Enemy";
-	public float maxDist = 200;
+	public Transform centerObject ; // dette skal være spilleren 
+	public float mapScale = 0.3f; // størrelsesforhold
+	public Vector2 mapCenter = new Vector2(50,50); // hvor skal kortet placeres på skærmen 
+	public string tagFilter =  "Enemy"; // de skal vel egentlig have player som tag
+	public float maxDist = 200; // hvor langt skal vi kigge med radaren
 	
 	void OnGUI() 
 	{
@@ -28,7 +29,7 @@ public class Radar : MonoBehaviour
 		//	    float bY=centerObject.transform.position.z * mapScale;
 		
 		
-		GUI.DrawTexture(new Rect(mapCenter.x-32,mapCenter.y-32,64,64),radarBG);
+		GUI.DrawTexture(new Rect(mapCenter.x-(mapSize/2),mapCenter.y-(mapSize/2),mapSize,mapSize),radarBG);
 		DrawBlipsFor(tagFilter);
 		
 	}
