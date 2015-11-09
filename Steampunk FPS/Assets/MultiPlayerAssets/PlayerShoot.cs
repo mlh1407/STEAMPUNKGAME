@@ -42,14 +42,14 @@ public class PlayerShoot : NetworkBehaviour {
 
 		//
 		RaycastHit _hit;
-		if (Physics.Raycast(cam.transform.position, cam.transform.forward, out _hit, weapon.range, mask) )
+		if (Physics.Raycast(cam.transform.position, cam.transform.forward, out _hit, 100f, mask) )
 		{
 			if (_hit.collider.tag == PLAYER_TAG)
 			{ 
-				 
+				Instantiate (GunParticle,_hit.point,Quaternion.identity);
 				CmdPlayerShot(_hit.collider.name);
 			} 
-				Instantiate (GunParticle,_hit.point,Quaternion.identity);
+			//	Instantiate (GunParticle,_hit.point,Quaternion.identity);
 
 
 		}
