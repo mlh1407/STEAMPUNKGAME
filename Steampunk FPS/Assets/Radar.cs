@@ -12,6 +12,7 @@ public class Radar : MonoBehaviour
 	public Texture blip  ;
 	public Texture radarBG ;
 	public int mapSize = 128;
+	public int z = 15;
 	
 	public Transform centerObject ; // dette skal være spilleren 
 	public float mapScale = 0.3f; // størrelsesforhold
@@ -71,7 +72,7 @@ public class Radar : MonoBehaviour
 		if(dist<= maxDist)
 		{ 
 			// this is the diameter of our largest radar circle
-			GUI.DrawTexture(new Rect(mapCenter.x+bX,mapCenter.y+bY,2,2),aTexture);
+			GUI.DrawTexture(new Rect(mapCenter.x+bX,mapCenter.y+bY,z,z),aTexture);
 		}
 		
 	}

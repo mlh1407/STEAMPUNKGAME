@@ -27,9 +27,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
-		[SerializeField] private float crouchHeight;
-		[SerializeField] private bool toggleCrouch;
-		[SerializeField] private float crouchSpeed = 0.3f;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -44,10 +41,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-		private float currentHeight;
-		private bool crouch; 
-
-		private float tParam = 0;
 
         // Use this for initialization
         private void Start()
@@ -69,7 +62,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             RotateView();
-			Crouch();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -113,13 +105,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
                                m_CharacterController.height/2f);
             desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
 
-			if (crouch == false) {
-				m_MoveDir.x = desiredMove.x * speed;
-				m_MoveDir.z = desiredMove.z * speed;
-			} else {
-				m_MoveDir.x = desiredMove.x * speed * 0.3f;
-				m_MoveDir.z = desiredMove.z * speed * 0.3f;
-			}
+            m_MoveDir.x = desiredMove.x*speed;
+            m_MoveDir.z = desiredMove.z*speed;
+
 
             if (m_CharacterController.isGrounded)
             {
@@ -243,41 +231,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-		private void Crouch() {
-		
-			if (toggleCrouch == false) {
-
-				if (Input.GetButtonDown ("Crouch")) {
-					crouch = true;
-					tParam = 0;
-				} 
-
-				if (Input.GetButtonUp ("Crouch")) {
-					crouch = false;
-					tParam = 0;
-				}
-
-			} else {
-
-				if (Input.GetButtonDown ("Crouch")) {
-					crouch = !crouch;
-					tParam = 0;
-				}
-			}
-
-			if (tParam < 1) {
-				tParam += Time.deltaTime * crouchSpeed; //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
-
-				if (crouch == false) {
-					transform.localScale = new Vector3(1, Mathf.Lerp (crouchHeight, 1, tParam), 1);
-				}
-				else
-				{
-					transform.localScale = new Vector3(1, Mathf.Lerp (1, crouchHeight, tParam), 1);
-				}
-			}
-		}
-		
 
         private void RotateView()
         {
