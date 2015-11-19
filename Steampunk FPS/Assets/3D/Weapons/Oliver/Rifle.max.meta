@@ -19,6 +19,7 @@ ModelImporter:
     100022: //RootNode
     100024: Sky001
     100026: Sphere001
+    100028: Object004
     400000: Box001
     400002: Box002
     400004: Box003
@@ -33,6 +34,7 @@ ModelImporter:
     400022: //RootNode
     400024: Sky001
     400026: Sphere001
+    400028: Object004
     2300000: Box001
     2300002: Box002
     2300004: Box003
@@ -44,6 +46,7 @@ ModelImporter:
     2300016: Object002
     2300018: Plane001
     2300020: Sphere001
+    2300022: Object004
     3300000: Box001
     3300002: Box002
     3300004: Box003
@@ -55,6 +58,7 @@ ModelImporter:
     3300016: Object002
     3300018: Plane001
     3300020: Sphere001
+    3300022: Object004
     4300000: Plane001
     4300002: Box001
     4300004: Cylinder001
@@ -66,6 +70,7 @@ ModelImporter:
     4300016: Box005
     4300018: Cylinder002
     4300020: Object002
+    4300022: Object004
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -123,8 +128,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

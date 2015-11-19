@@ -3,7 +3,7 @@
 #
 # !!! WARNING !!!
 #
-# … you MUST convert Unity to using Metafiles *before* you start using this
+# â€¦ you MUST convert Unity to using Metafiles *before* you start using this
 #  .gitignore file, or you WILL lose data!
 #
      
@@ -20,4 +20,7 @@ Temp
 *.unityproj
 *.sln
 *.userprefs
+Steampunk FPS/ProjectSettings/ProjectVersion.txt
+*.txt
+Steampunk FPS/ProjectSettings/ProjectVersion.txt
 Steampunk FPS/ProjectSettings/ProjectVersion.txt
