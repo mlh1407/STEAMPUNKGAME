@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
 var particleEmitters : ParticleSystem[];
+var light : GameObject;
  
 function Start () {
 
@@ -13,6 +14,9 @@ function Update () {
 			
 			particleEmitters[i].Play();
 		}
+		
+		light.Animation.Play();
 	}
+
 
 }
