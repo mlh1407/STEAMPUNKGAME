@@ -1,4 +1,4 @@
-##################
+﻿##################
 # Unity ignores:
 #
 # !!! WARNING !!!
@@ -22,5 +22,3 @@ Temp
 *.userprefs
 Steampunk FPS/ProjectSettings/ProjectVersion.txt
 *.txt
-Steampunk FPS/ProjectSettings/ProjectVersion.txt
-Steampunk FPS/ProjectSettings/ProjectVersion.txt
