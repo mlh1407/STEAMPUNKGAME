@@ -1,0 +1,6 @@
+# track all photoshop files
+*.psd
+
+# track lightmap
+./Assets/Scenes/Map/LightmapSnapshot.asset
+*.exr 
