@@ -1,24 +1,46 @@
-﻿##################
-# Unity ignores:
-#
-# !!! WARNING !!!
-#
-# … you MUST convert Unity to using Metafiles *before* you start using this
-#  .gitignore file, or you WILL lose data!
-#
-     
-# OS X only:
-.DS_Store
-*.swp
-*.Trashes
-     
-# All platforms:
-Library
-Temp
-*.csproj
-*.pidb
+# Unity Builds (save on storage space)
+Unity/Dist/
+
+# ---------------[ Unity generated ]------------------ #
+Unity/Temp/
+Unity/Obj/
+Unity/UnityGenerated/
+Unity/Library/
 *.unityproj
-*.sln
+*.booproj
+
+# Unity/*.sln
+# Unity/*.csproj
+
+# Unity crash handler generates
+Unity/sysinfo.txt
+
+# ----[ Visual Studio / MonoDevelop generated ]------- #
+ 
+Unity/ExportedObj/
+*.svd
 *.userprefs
-Steampunk FPS/ProjectSettings/ProjectVersion.txt
-*.txt
+*.pidb
+*.user
+*.suo
+*.opensdf
+*.sdf
+
+# UnityVS generated from .pdb files
+Unity/Assets/Plugins/*.mdb
+Unity/Assets/Plugins/*.mdb.meta
+
+# -------------[ OS generated ]------------------------ #
+
+# Vim generated? Not sure
+*.swo
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+*.swp
