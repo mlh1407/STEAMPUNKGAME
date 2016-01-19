@@ -7,8 +7,6 @@ Project("{4D35C478-0D98-4BF4-043F-5F5CDC36D6C4}") = "Steampunk FPS", "Assembly-C
 EndProject
 Project("{4D35C478-0D98-4BF4-043F-5F5CDC36D6C4}") = "Steampunk FPS", "Assembly-CSharp-Editor.csproj", "{4529D055-117C-F10C-CA82-972A409C1CAF}"
 EndProject
-Project("{4D35C478-0D98-4BF4-043F-5F5CDC36D6C4}") = "Steampunk FPS", "Assembly-UnityScript.unityproj", "{AE8EEC50-8B77-1A29-7581-47C5FFEC3D4B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{4529D055-117C-F10C-CA82-972A409C1CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4529D055-117C-F10C-CA82-972A409C1CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4529D055-117C-F10C-CA82-972A409C1CAF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE8EEC50-8B77-1A29-7581-47C5FFEC3D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE8EEC50-8B77-1A29-7581-47C5FFEC3D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE8EEC50-8B77-1A29-7581-47C5FFEC3D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE8EEC50-8B77-1A29-7581-47C5FFEC3D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +48,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal
