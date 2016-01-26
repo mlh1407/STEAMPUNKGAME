@@ -1,6 +1,8 @@
 ﻿#pragma strict
 
 var particleEmitters : ParticleSystem[];
+var light : GameObject;
+var muzzle : GameObject;
  
 function Start () {
 
@@ -13,6 +15,12 @@ function Update () {
 			
 			particleEmitters[i].Play();
 		}
+		
+		//light.Animation.Play();
+		
+		muzzle.Enables = true;
+		yield
 	}
+
 
 }

@@ -11,27 +11,77 @@ ModelImporter:
     100006: Box004
     100008: //RootNode
     100010: Plane001
+    100012: Box005
+    100014: Box006
+    100016: Box007
+    100018: Box008
+    100020: Cylinder001
+    100022: Cylinder002
+    100024: Cylinder003
+    100026: Line001
+    100028: Sphere001
+    100030: Tube001
     400000: Box001
     400002: Box002
     400004: Box003
     400006: Box004
     400008: //RootNode
     400010: Plane001
+    400012: Box005
+    400014: Box006
+    400016: Box007
+    400018: Box008
+    400020: Cylinder001
+    400022: Cylinder002
+    400024: Cylinder003
+    400026: Line001
+    400028: Sphere001
+    400030: Tube001
     2300000: Box001
     2300002: Box002
     2300004: Box003
     2300006: Box004
     2300008: Plane001
+    2300010: Box005
+    2300012: Box006
+    2300014: Box007
+    2300016: Box008
+    2300018: Cylinder001
+    2300020: Cylinder002
+    2300022: Cylinder003
+    2300024: Line001
+    2300026: Sphere001
+    2300028: Tube001
     3300000: Box001
     3300002: Box002
     3300004: Box003
     3300006: Box004
     3300008: Plane001
+    3300010: Box005
+    3300012: Box006
+    3300014: Box007
+    3300016: Box008
+    3300018: Cylinder001
+    3300020: Cylinder002
+    3300022: Cylinder003
+    3300024: Line001
+    3300026: Sphere001
+    3300028: Tube001
     4300000: Plane001
     4300002: Box001
     4300004: Box002
     4300006: Box003
     4300008: Box004
+    4300010: Box005
+    4300012: Tube001
+    4300014: Box006
+    4300016: Box007
+    4300018: Box008
+    4300020: Sphere001
+    4300022: Cylinder001
+    4300024: Cylinder002
+    4300026: Cylinder003
+    4300028: Line001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -89,8 +139,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
